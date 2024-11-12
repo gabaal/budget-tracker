@@ -11,7 +11,6 @@ import {
 } from "../ui/dropdown-menu";
 import { Button } from "../ui/button";
 import { MixerHorizontalIcon } from "@radix-ui/react-icons";
-import { table } from "console";
 
 interface DataTableViewOptionsProps<TData> {
   table: Table<TData>;
