@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { getTransactionHistoryResponseType } from "@/app/api/transactions-history/route";

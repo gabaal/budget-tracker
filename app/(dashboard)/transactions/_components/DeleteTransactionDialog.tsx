@@ -2,7 +2,6 @@
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import React from "react";
-import { DeleteCategory } from "../../_actions/categories";
 import { toast } from "sonner";
 import {
   AlertDialog,
@@ -13,9 +12,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
-import { TransactionType } from "@/lib/types";
 import { DeleteTransaction } from "./_actions/deleteTransaction";
 
 interface Props {
