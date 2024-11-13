@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable */
 "use server";
 
 import prisma from "@/lib/prisma";
@@ -23,13 +24,13 @@ export async function CreateCategory(form: CreateCategorySchemaType) {
   if (!user) {
     redirect("/sign-in");
   }
-  const { name, icon, type } = parsedBody.data;
+  const { name, icon, type } = parsedBody!.data!;
   return await prisma.category.create({
     data: {
       userId: user.id,
-      name,
-      icon,
-      type,
+      name: name,
+      icon: icon,
+      type: type,
     },
   });
 }
@@ -50,8 +51,8 @@ export async function DeleteCategory(form: DeleteCategorySchemaType) {
     where: {
       name_userId_type: {
         userId: user.id,
-        name: parsedBody.data.name,
-        type: parsedBody.data.type,
+        name: parsedBody!.data!.name,
+        type: parsedBody!.data!.type,
       },
     },
   });

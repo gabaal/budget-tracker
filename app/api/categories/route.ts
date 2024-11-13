@@ -5,7 +5,6 @@ import { z } from "zod";
 
 export async function GET(request: Request) {
   const user = await currentUser();
-
   if (!user) {
     redirect("/sign-in");
   }
